@@ -71,39 +71,51 @@ typeNum([1, "bob", 3]); // => [1,3]
 // Q7.
 const containsAnd = (arr) => {
   const newArr = [];
-  arr.filter((item)=>{
-      if(item.includes('and')){
-        newArr.push(item);
-      }
-  })
+  arr.filter((item) => {
+    if (item.includes("and")) {
+      newArr.push(item);
+    }
+  });
   return newArr;
 };
-containsAnd(['panda', 'ran', 'and'])
+containsAnd(["panda", "ran", "and"]); //=> ['panda', 'and']
 
 //---//
 
 // Q8.
 const oddValues = (arr) => {
-    const newArr = [];
-    arr.filter((item)=>{
-        if(item % 2 != 0){
-            newArr.push(item);
-        }
-    })
-    return newArr;
+  const newArr = [];
+  arr.filter((item) => {
+    if (item % 2 != 0) {
+      newArr.push(item);
+    }
+  });
+  return newArr;
 };
+oddValues([1, 2, 3]); //=> [1,3]
 
 //---//
 
 // Q9.
 const addValues = (arr) => {
-    const newArr = [];
-    arr.reduce((acc,item, index) =>{
-        
-    }
-    )
-  };
-  
-  addValues([1,2,3,4]) // => 10  
-  
-  
+  const newArr = arr.reduce(
+      (acc, item) => acc + item,
+      0)
+      return newArr;
+};
+
+addValues([15, 10, 15, 5]); // => 45
+
+//---//
+
+// Q10.
+const countNumberOfElements = (arr) => {
+    const newArr = arr.reduce(
+    (index) => index + 1,
+    0)
+    return newArr; 
+};
+
+countNumberOfElements([15, 10, 15, 5]);
+
+//---//
